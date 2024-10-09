@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="nav">
+            <div class="logo">OWN-<span id="black">Design</span></div>
+            <ul id="ul-tab">
+                <li id="border">Home</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Blogs</li>
+                <li>Portfolio</li>
+            </ul>
+        </div>
+    </div>
+
+    <span id="button" onclick="getbutton()"></span>
+
+    <sidebar id="rex">
+        <ul id="contant">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Blogs</li>
+            <li>Portfolio</li>
+        </ul>
+    </sidebar>
+
+
+    <div class="images">
+        <div class="main">
+            <img class="list active" src="crouser-1.webp" alt="">
+            <img class="list" src="crouser-2.webp" alt="">
+            <img class="list" src="crouser-1.webp" alt="">
+
+            <div class="main-button">
+                <span class="donts"><i class="fa-solid fa-circle"></i></span>
+                <span class="donts"><i class="fa-solid fa-circle"></i></span>
+                <span class="donts"><i class="fa-solid fa-circle"></i></span>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglepopup()">&times;</div>
+                <!-- <h1>Tilte</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat necessitatibus perspiciatis fuga facilis esse repellendus, dignissimos ullam culpa officiis nihil rerum praesentium illum quasi voluptate dolor dolorum qui voluptatum porro.</p> -->
+                    <div class="listbox">
+                    <div class="listbox-content">
+                    <img src="img-1.png" alt="">
+                    </div>
+            <div class="listbox-content">
+                <img src="img-2.webp" alt="">
+            </div>
+    
+            <div class="listbox-content">
+                <img src="img-3.jpg" alt="">
+            </div>
+        </div>
+        <div class="listbox1">
+            <div class="listbox-content1">
+            <img src="img-4.jpg" alt="">
+            </div>
+    <div class="listbox-content1">
+        <img src="img-5.webp" alt="">
+    </div>
+
+    <div class="listbox-content1">
+        <img src="img-6.webp" alt="">
+    </div>
+</div>
+    </div>
+        </div>
+        <button onclick="togglepopup()">Show POPUP</button>
+    </div>
+
+
+    <script>
+
+        function getbutton() {
+            let button = document.getElementById("button")
+            let rex = document.getElementById("rex")
+            button.classList.toggle("active")
+            rex.classList.toggle("active")
+        }
+
+        function togglepopup() {
+            document.getElementById("popup-1").classList.toggle("active")
+        }
+
+        let donts = document.querySelectorAll(".donts")
+        let list = document.querySelectorAll(".list")
+        donts.forEach((item,index)=>{
+            item.addEventListener('click',function(){
+                list.forEach(img => img.classList.remove("active"))
+                list[index].classList.add("active")
+            })
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

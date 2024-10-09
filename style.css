@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ul#ul-tab {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-size: 22px;
+    margin: auto;
+}
+.logo {
+    font-size: 38px;
+    font-weight: 700;
+}
+.nav {
+    display: flex;
+    background: brown;
+    color: white;
+    padding: 20px;
+}
+span#button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    right: 37px;
+    background: white;
+    z-index: 9999;
+}
+span#button:before {
+    width: 80%;
+    height: 3px;
+    position: absolute;
+    background: black;
+    content: "";
+    top: 14px;
+    right: 5px;
+    transition: .5s;
+}
+span#button:after {
+    width: 80%;
+    height: 3px;
+    position: absolute;
+    content: "";
+    background: black;
+    top: 26px;
+    right: 5px;
+    transition: .5s;
+}
+sidebar#rex {
+    list-style: none;
+    background: #00BCD4;
+    color: white;
+    top: 0;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 40%;
+    transition: .5s;
+    text-align: center;
+    padding-top: 41px;
+    line-height: 48px;
+    font-size: 30px;
+    opacity: 0;
+}
+sidebar#rex.active {
+    width: 40%;
+    /* right: 0; */
+    opacity: 1;
+    z-index: 9;
+}
+ul#contant{
+    list-style: none;
+}
+span#button.active:before {
+    transform: rotate(45deg);
+    transition: .5s;
+    top: 17px;
+}
+span#button.active::after {
+    transform: rotate(135deg);
+    transition: .5s;
+    top: 17px;
+}
+img.img {
+    width: 100%;
+    height: 600px;
+}
+button#popup {
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+}
+.popup .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 94vh;
+    background-color: #000000a6;
+    z-index: 1;
+    display: none;
+}
+.popup .content {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 336px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.popup .close-btn {
+    position: absolute;
+    top: 5px;
+    right: -624px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    align-items: center;
+    border-radius: 50%;
+}
+.popup.active .overlay{
+    display: block;
+}
+.popup.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+button {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+}
+h1 {
+    background: white;
+    top: 135%;
+    position: absolute;
+    right: 16px;
+    left: 20px;
+}
+p{
+        background: white;
+        top: 154%;
+        position: absolute;
+        right: 16px;
+        left: 20px;
+}
+.listbox {
+    display: flex;
+    width: 900px;
+    gap: 20px;
+    margin: auto;
+    margin-top: 6%;
+}
+.listbox1 {
+    display: flex;
+    width: 900px;
+    gap: 20px;
+    margin: auto;
+    margin-top: 6%;
+}
+img {
+    width: 100%;
+}
+img.list {
+    display: none;
+}
+img.list.active {
+    display: block;
+}
+.main-button {
+    position: absolute;
+    left: 50%;
+    margin-top: 16px;
+    gap: 20px;
+    display: flex;
+    font-size: 20px;
+}
+li#border {
+    border-bottom: 3px solid white;
+}
